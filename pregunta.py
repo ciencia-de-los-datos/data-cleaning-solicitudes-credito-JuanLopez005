@@ -15,7 +15,8 @@ def clean_data():
     
     #
     # Inserte su código aquí
-    #        
+    #  
+          
          
     df.rename(columns={"Unnamed: 0":"index"}, inplace=True)    
     df.set_index("index",inplace=True)
