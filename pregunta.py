@@ -11,7 +11,13 @@ import pandas as pd
 
 def clean_data():
     
-    df = pd.read_csv("solicitudes_credito.csv", sep=";")      
+    df = pd.read_csv("solicitudes_credito.csv", sep=";")  
+    
+    #
+    # Inserte su código aquí
+    #
+    
+         
     df.rename(columns={"Unnamed: 0":"index"}, inplace=True)    
     df.set_index("index",inplace=True)
     df.sexo = df.sexo.str.lower().astype(str).str.strip()                                        # Get string lower
