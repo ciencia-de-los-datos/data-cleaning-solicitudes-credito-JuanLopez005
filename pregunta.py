@@ -24,7 +24,8 @@ def clean_data():
     df.sexo = df.sexo.str.lower().astype(str).str.strip()                                        # Get string lower
     df.tipo_de_emprendimiento = df.tipo_de_emprendimiento.str.capitalize().str.strip() 
     df.idea_negocio = df.idea_negocio.str.replace("-"," ").str.replace("_"," ").str.capitalize().str.strip()
-    df.barrio = df.barrio.str.replace("_","-").str.replace("-"," ").str.lower()	    
+    
+       
     df.estrato = df.estrato.astype(str).str.capitalize()
     df.comuna_ciudadano = df.comuna_ciudadano.astype(str).str.capitalize()    
     df.fecha_de_beneficio = pd.to_datetime(df.fecha_de_beneficio,dayfirst=True)
